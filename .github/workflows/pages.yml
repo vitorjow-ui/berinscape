@@ -18,6 +18,7 @@ jobs:
           python-version: "3.13"
       - name: Extrair código do jogo
         run: python -m zipfile -e berinscape-source.zip .
+      - run: python -m pip install Pillow==11.3.0
       - name: Preparar arquivos públicos
         run: python Berinscape/tools/build_site.py
       - uses: actions/configure-pages@v5
